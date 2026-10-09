@@ -5,9 +5,10 @@ Sistema para gerenciamento de eventos e participantes, desenvolvido em duas fase
 - **Fase 1:** API REST desenvolvida em Java com Spring Boot e MongoDB.
 - **Fase 2:** Frontend desenvolvido em Angular consumindo a API REST da Fase 1.
 
-## Integrante
+## Integrantes
 
 - Gabriel Davi Rocha Nobelino - 2515050046
+- Gustavo Paula Cabral - 2515050020
 
 ## Tecnologias utilizadas
 
