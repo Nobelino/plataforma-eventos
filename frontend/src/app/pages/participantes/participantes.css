@@ -1,0 +1,39 @@
+h2 {
+  margin-bottom: 20px;
+}
+
+.participante-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.participante-card h3 {
+  margin-top: 0;
+}
+
+.botao-novo {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.botao-editar {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.botao-excluir {
+  padding: 8px 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

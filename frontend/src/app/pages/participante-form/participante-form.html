@@ -1,0 +1,63 @@
+<section class="form-container">
+
+  <h2>
+    {{ modoEdicao ? 'Editar Participante' : 'Novo Participante' }}
+  </h2>
+
+  <form (ngSubmit)="salvar()">
+
+    <div class="campo">
+
+      <label for="nome">
+        Nome
+      </label>
+
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        [(ngModel)]="participante.nome"
+        required
+      >
+
+    </div>
+
+    <div class="campo">
+
+      <label for="email">
+        Email
+      </label>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        [(ngModel)]="participante.email"
+        required
+      >
+
+    </div>
+
+    <div class="campo">
+
+      <label for="telefone">
+        Telefone
+      </label>
+
+      <input
+        id="telefone"
+        name="telefone"
+        type="text"
+        [(ngModel)]="participante.telefone"
+        required
+      >
+
+    </div>
+
+    <button type="submit">
+      {{ modoEdicao ? 'Salvar Alterações' : 'Salvar Participante' }}
+    </button>
+
+  </form>
+
+</section>

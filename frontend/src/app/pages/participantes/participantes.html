@@ -1,0 +1,48 @@
+<section>
+
+  <h2>Participantes</h2>
+
+  <a
+    routerLink="/participantes/novo"
+    class="botao-novo">
+    + Novo Participante
+  </a>
+
+  @if (participantes().length === 0) {
+    <p>Nenhum participante cadastrado.</p>
+  }
+
+  @for (participante of participantes(); track participante.id) {
+
+    <div class="participante-card">
+
+      <h3>{{ participante.nome }}</h3>
+
+      <p>
+        <strong>Email:</strong>
+        {{ participante.email }}
+      </p>
+
+      <p>
+        <strong>Telefone:</strong>
+        {{ participante.telefone }}
+      </p>
+
+      <a
+        [routerLink]="['/participantes/editar', participante.id]"
+        class="botao-editar">
+        Editar
+      </a>
+
+      <button
+        type="button"
+        class="botao-excluir"
+        (click)="excluir(participante.id)">
+        Excluir
+      </button>
+
+    </div>
+
+  }
+
+</section>

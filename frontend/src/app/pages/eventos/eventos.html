@@ -1,0 +1,36 @@
+<section>
+  <h2>Eventos</h2>
+
+  <a routerLink="/eventos/novo" class="botao-novo">
+    + Novo Evento
+  </a>
+
+  @if (eventos().length === 0) {
+    <p>Nenhum evento cadastrado.</p>
+  }
+
+  @for (evento of eventos(); track evento.id) {
+  <div class="evento-card">
+
+    <h3>{{ evento.nome }}</h3>
+
+    <p><strong>Descrição:</strong> {{ evento.descricao }}</p>
+    <p><strong>Data:</strong> {{ evento.data }}</p>
+    <p><strong>Local:</strong> {{ evento.local }}</p>
+    <p><strong>Capacidade:</strong> {{ evento.capacidade }}</p>
+
+    <a
+      [routerLink]="['/eventos/editar', evento.id]"
+      class="botao-editar">
+      Editar
+    </a>
+    
+    <button
+      type="button"
+      class="botao-excluir"
+      (click)="excluir(evento.id)">
+      Excluir
+    </button>
+
+  </div>
+}

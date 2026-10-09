@@ -1,0 +1,74 @@
+<section class="form-container">
+
+  <h2>
+  {{ modoEdicao ? 'Editar Evento' : 'Novo Evento' }}
+  </h2>
+
+  <form (ngSubmit)="salvar()">
+
+    <div class="campo">
+      <label for="nome">Nome</label>
+
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        [(ngModel)]="evento.nome"
+        required
+      >
+    </div>
+
+    <div class="campo">
+      <label for="descricao">Descrição</label>
+
+      <textarea
+        id="descricao"
+        name="descricao"
+        [(ngModel)]="evento.descricao"
+        required
+      ></textarea>
+    </div>
+
+    <div class="campo">
+      <label for="data">Data</label>
+
+      <input
+        id="data"
+        name="data"
+        type="date"
+        [(ngModel)]="evento.data"
+        required
+      >
+    </div>
+
+    <div class="campo">
+      <label for="local">Local</label>
+
+      <input
+        id="local"
+        name="local"
+        type="text"
+        [(ngModel)]="evento.local"
+        required
+      >
+    </div>
+
+    <div class="campo">
+      <label for="capacidade">Capacidade</label>
+
+      <input
+        id="capacidade"
+        name="capacidade"
+        type="number"
+        [(ngModel)]="evento.capacidade"
+        required
+      >
+    </div>
+
+    <button type="submit">
+      {{ modoEdicao ? 'Salvar Alterações' : 'Salvar Evento' }}
+    </button>
+
+  </form>
+
+</section>
